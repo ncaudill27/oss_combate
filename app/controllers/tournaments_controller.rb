@@ -28,6 +28,13 @@ class TournamentsController < ApplicationController
 
     redirect_to @tournament
   end
+
+  def destroy
+    @tournament = Tournament.find_by_id(params[:id])
+    @tournament.destroy
+
+    redirect_to tournaments_path
+  end
   
   private
 

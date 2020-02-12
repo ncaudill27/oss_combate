@@ -6,7 +6,9 @@
         Organization: <%= tourney.organization %><br>
         Date: <%= tourney.date %><br>
         Registration Open: <%= tourney.registration_open %><br>
-        Registration Close: <%= tourney.registration_close %><br><br>
+        Registration Close: <%= tourney.registration_close %><br>
+        <%= link_to "Edit", edit_tournament_path(tourney) %>
+        <%= button_to "Delete", tourney, method: :delete %><br><br>
     </li>
 <% end %>
 </ul>
