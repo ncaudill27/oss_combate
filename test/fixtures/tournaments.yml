@@ -1,0 +1,15 @@
+# Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
+
+one:
+  organization: MyString
+  url: MyString
+  date: 2020-02-11 18:59:57
+  registration_open: 2020-02-11 18:59:57
+  registration_close: 2020-02-11 18:59:57
+
+two:
+  organization: MyString
+  url: MyString
+  date: 2020-02-11 18:59:57
+  registration_open: 2020-02-11 18:59:57
+  registration_close: 2020-02-11 18:59:57
