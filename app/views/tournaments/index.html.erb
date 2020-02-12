@@ -1,15 +1,19 @@
 <h1>Tournaments</h1>
 
 <ul>
-<% @tournaments.each do |tourney| %>
+<% @tournaments.each do |tournament| %>
+<!-- Convert to partial -->
     <li>
-        Organization: <%= link_to tourney.organization, tournament_path(tourney.id) %><br>
-        Date: <%= tourney.date %><br>
-        Registration Open: <%= tourney.registration_open %><br>
-        Registration Close: <%= tourney.registration_close %><br>
-        <%= link_to "Edit", edit_tournament_path(tourney) %>
-        <%= button_to "Delete", tourney, method: :delete %><br><br>
+        Organization: <%= link_to tournament.organization, tournament_path(tournament.id) %><br>
+        Date: <%= tournament.date %><br>
+        Registration Open: <%= tournament.registration_open %><br>
+        Registration Close: <%= tournament.registration_close %><br>
+        <%= link_to "Edit", edit_tournament_path(tournament) %>
+        <%= button_to "Delete", tournament, method: :delete %><br><br>
     </li>
+<!-- Tournament partial end -->
 <% end %>
 </ul>
+
+<!-- Will eventually become admin only -->
 <%= link_to "Add Tournament", new_tournament_path %>
