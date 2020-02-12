@@ -4,8 +4,8 @@
 
 <ul>
 <% @user.tournaments.each do |tournament| %>
-<!-- Another use for tournament partial -->
-    <li>
+<li>
+    <!-- Another use for tournament partial -->
         Organization: <%= link_to tournament.organization, tournament_path(tournament.id) %><br>
         Date: <%= tournament.date %><br>
         Registration Open: <%= tournament.registration_open %><br>

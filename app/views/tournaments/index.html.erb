@@ -2,16 +2,16 @@
 
 <ul>
 <% @tournaments.each do |tournament| %>
-<!-- Convert to partial -->
     <li>
+<!-- Convert to partial -->
         Organization: <%= link_to tournament.organization, tournament_path(tournament.id) %><br>
         Date: <%= tournament.date %><br>
         Registration Open: <%= tournament.registration_open %><br>
         Registration Close: <%= tournament.registration_close %><br>
         <%= link_to "Edit", edit_tournament_path(tournament) %>
         <%= button_to "Delete", tournament, method: :delete %><br><br>
-    </li>
 <!-- Tournament partial end -->
+    </li>
 <% end %>
 </ul>
 
