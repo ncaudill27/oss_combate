@@ -1,15 +1,14 @@
 class TournamentsController < ApplicationController
+  before_action :set_tournament, only: [:show, :new, :edit, :update, :destroy]
 
   def index
     @tournaments = Tournament.all
   end
 
   def show
-    @tournament = Tournament.find_by_id(params[:id])
   end
 
   def new
-    @tournament = Tournament.new
   end
 
   def create
@@ -19,18 +18,15 @@ class TournamentsController < ApplicationController
   end
 
   def edit
-    @tournament = Tournament.find_by_id(params[:id])
   end
 
   def update
-    @tournament = Tournament.find_by_id(params[:id])
     @tournament.update(tournament_params)
 
     redirect_to @tournament
   end
 
   def destroy
-    @tournament = Tournament.find_by_id(params[:id])
     @tournament.destroy
 
     redirect_to tournaments_path
@@ -40,5 +36,13 @@ class TournamentsController < ApplicationController
 
   def tournament_params
     params.require(:tournament).permit(:organization, :url, :date, :registration_open, :registration_close)
+  end
+
+  def set_tournament
+    if params[:id]
+      @tournament = Tournament.find_by_id(params[:id])
+    else
+      @tournament = Tournament.new
+    end
   end
 end
