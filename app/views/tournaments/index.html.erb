@@ -1,0 +1,12 @@
+<h1>Tournaments</h1>
+
+<ul>
+<% @tournaments.each do |tourney| %>
+    <li>
+        Organization: <%= tourney.organization %><br>
+        Date: <%= tourney.date %><br>
+        Registration Open: <%= tourney.registration_open %><br>
+        Registration Close: <%= tourney.registration_close %><br><br>
+    </li>
+<% end %>
+</ul>
