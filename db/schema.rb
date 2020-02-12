@@ -32,7 +32,7 @@ ActiveRecord::Schema.define(version: 2020_02_12_030900) do
     t.string "password_digest"
     t.string "gi_skill"
     t.string "nogi_skill"
-    t.float "weight"
+    t.integer "weight"
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end

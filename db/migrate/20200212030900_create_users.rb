@@ -7,7 +7,7 @@ class CreateUsers < ActiveRecord::Migration[6.0]
       t.string :password_digest
       t.string :gi_skill
       t.string :nogi_skill
-      t.float :weight
+      t.integer :weight
 
       t.timestamps
     end
