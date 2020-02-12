@@ -13,7 +13,20 @@ class TournamentsController < ApplicationController
   end
 
   def create
-    
+    @tournament = Tournament.create(tournament_params)
+
+    redirect_to @tournament
+  end
+
+  def edit
+    @tournament = Tournament.find_by_id(params[:id])
+  end
+
+  def update
+    @tournament = Tournament.find_by_id(params[:id])
+    @tournament.update(tournament_params)
+
+    redirect_to @tournament
   end
   
   private
