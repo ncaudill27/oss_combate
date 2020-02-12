@@ -1,5 +1,9 @@
 <h1><%= @tournament.organization %></h1>
 
+<% if logged_in? %>
+    <%= link_to "Bookmark", tournament_events_path(@tournament), method: "post" %>
+<% end %>
+
 <h2>
     Date: <%= @tournament.date %><br>
     Registration Open: <%= @tournament.registration_open %><br>
