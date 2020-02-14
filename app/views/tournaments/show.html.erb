@@ -1,7 +1,7 @@
 <h1><%= @tournament.organization %></h1>
 
 <% if logged_in? %>
-    <%= link_to "Bookmark", tournament_events_path(@tournament), method: "post" %>
+    <%= link_to "Bookmark", tournament_events_path(@tournament, current_user), method: "post" %>
 <% end %>
 
 <h2>
